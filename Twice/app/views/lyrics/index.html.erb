@@ -1,2 +1,13 @@
-<h1>Lyrics#index</h1>
-<p>Find me in app/views/lyrics/index.html.erb</p>
+<h1>Lyrics</h1>
+
+<div class="post col-md-10">
+<% @lyrics.each do |lyric| %>
+    <h2><%= link_to lyric.song %></h2>
+    <%= link_to 'Delete', lyric, method: :delete %>
+<% end %>
+</div>
+<div class="newpost col-md-12">
+<h2> Add Lyrics </h2>
+        <%= render 'lyrics/create' %>
+ </div>
+ 

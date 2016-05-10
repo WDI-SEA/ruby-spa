@@ -5,8 +5,8 @@ class LyricsController < ApplicationController
   end
 
   def create
-    lyric = Lyric.create post_params do |p|
-    redirect_to lyrics_path
+    # Lyric.create post_params
+    # redirect_to lyrics_path
   end
 
   def new
@@ -22,14 +22,15 @@ class LyricsController < ApplicationController
   end
 
   def update
-    p = Lyric.find params[:id]
-    p.update lyric_params
-    redirect_to lyrics_path
+    # p = Lyric.find params[:id]
+    # p.update lyric_params
+  # end
+    # redirect_to lyrics_path
   end
 
   def destroy
-    Lyric.find(params[:id]).delete
-    redirect_to lyrics_path
+    # Lyric.find(params[:id]).delete
+    # redirect_to lyrics_path
   end
 
   private

@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   get 'lyrics/destroy'
 
-  get 'main/index'
+  root 'lyrics#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
