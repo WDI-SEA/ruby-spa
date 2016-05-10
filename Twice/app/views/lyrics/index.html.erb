@@ -3,7 +3,6 @@
 <div class="post col-md-10">
 <% @lyrics.each do |lyric| %>
     <h2><%= link_to lyric.song %></h2>
-    <%= link_to 'Delete', lyric, method: :delete %>
 <% end %>
 </div>
 <div class="newpost col-md-12">
