@@ -18,6 +18,6 @@ class User < ActiveRecord::Base
 	has_many :post
 
 	def self.authenticate name, password
-    User.find_by_name(name).try(:authenticate, password)
+    User.find_by(name: name).try(:authenticate, password)
   end
 end

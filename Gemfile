@@ -28,6 +28,8 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'email_validator'
 
+gem 'bootstrap_form'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 

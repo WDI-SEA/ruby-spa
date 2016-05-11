@@ -1,6 +1,17 @@
 Rails.application.routes.draw do
   root "main#index"
 
+  # Protected Controller
+  get "posts/new" => "posts#new"
+  post "posts/new" => "posts#create"
+
+  # Create new user via modal
+  post "signup" => "auth#signup"
+
+  # Start and end sessions
+  post "login" => "auth#login"
+  get "logout" => "auth#logout"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
