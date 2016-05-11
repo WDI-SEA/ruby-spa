@@ -1,0 +1,27 @@
+// Place all the styles related to the main controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1.top-links{
+	display:inline-block;
+	float:left;
+}
+
+ul.top-links{
+	list-style: none;
+	float:right;
+	margin-top: 20px;
+}
+
+ul.hidden{
+	display: none;
+}
+
+li.top-links{
+	display:inline;
+	margin: 10px;
+}
+
+div.top-links{
+	height: 80px;
+}

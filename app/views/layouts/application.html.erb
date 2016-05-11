@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RubySpa</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= render 'partials/modals' %>
+
+<div class="container-fluid">
+	<div class="top-links">
+		<h1 class="top-links">Blue Box</h1>
+		<ul class="top-links no-login-links">
+			<li class="top-links"><a data-toggle="modal" href="#signup-modal">SIGN UP</a></li> |
+			<li class="top-links"><a data-toggle="modal" href="#login-modal">LOG IN</a></li>
+		</ul>
+		<ul class="top-links with-login-links hidden">
+			<li class="top-links">
+				<span class="username"></span> (<span class="useremail"></span>)
+			</li> |
+			<li class="top-links"><a class="logout-button">LOG OUT</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="container-fluid">
+	<%= yield %>
+</div>
+
+<script src="//code.jquery.com/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<!-- Latest compiled and minified CSS & JS -->
+
