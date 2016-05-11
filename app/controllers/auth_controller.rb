@@ -21,10 +21,27 @@ class AuthController < ApplicationController
 	  }.to_json
 	end
 
+	def signup
+		@user = User.create new_user_params
+
+	  if @user
+	    session[:user_id] = @user.id
+	    flash[:success] = "User logged in!!"
+	    render :json => {name: @user.name, email: @user.email}
+	  else
+	    flash[:danger] = "Credentials Invalid!!"
+	    render :json => {err: "Credentials Invalid!!"}
+	  end
+	end
+
 	private
 
 	def user_params
 	  params.require(:user).permit(:name, :password)
+	end
+
+  def new_user_params
+	  params.require(:user).permit(:email, :password, :name)
 	end
 
 end

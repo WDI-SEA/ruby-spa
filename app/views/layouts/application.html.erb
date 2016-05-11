@@ -12,17 +12,23 @@
 <%= render 'partials/modals' %>
 
 <div class="container-fluid">
-
-<div class="top-links">
-	<h1 class="top-links">Blue Box</h1>
-	<ul class="top-links">
-		<li class="top-links"><a data-toggle="modal" href="#signup-modal">SIGN UP</a></li> |
-		<li class="top-links"><a data-toggle="modal" href="#login-modal">LOG IN</a></li>
-	</ul>
+	<div class="top-links">
+		<h1 class="top-links">Blue Box</h1>
+		<ul class="top-links no-login-links">
+			<li class="top-links"><a data-toggle="modal" href="#signup-modal">SIGN UP</a></li> |
+			<li class="top-links"><a data-toggle="modal" href="#login-modal">LOG IN</a></li>
+		</ul>
+		<ul class="top-links with-login-links hidden">
+			<li class="top-links">
+				<span class="username"></span> (<span class="useremail"></span>)
+			</li> |
+			<li class="top-links"><a class="logout-button">LOG OUT</a></li>
+		</ul>
+	</div>
 </div>
 
-<%= yield %>
-
+<div class="container-fluid">
+	<%= yield %>
 </div>
 
 <script src="//code.jquery.com/jquery.js"></script>

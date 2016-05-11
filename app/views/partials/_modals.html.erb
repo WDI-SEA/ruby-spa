@@ -6,18 +6,6 @@
 				<h4 class="modal-title">Log In</h4>
 			</div>
 			<div class="modal-body">
-				
-<!-- 			<form id="login-form" action="login" method="POST" role="form">
-			
-				<div class="form-group">
-					<input type="text" class="form-control" id="login-form-username" placeholder="Username">
-					<input type="password" class="form-control" id="login-form-password" placeholder="Password">
-				</div>
-				<div class="modal-footer">
-					<button type="submit" class="btn btn-primary">Log In</button>
-					<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-				</div>
-			</form> -->
 
  				<%= bootstrap_form_for :user do |t| %>
   				<%= t.text_field :name %>
@@ -39,22 +27,6 @@
 				<h4 class="modal-title">Sign Up</h4>
 			</div>
 			<div class="modal-body">
-				
-<!-- 			<form id="signup-form" action="signup" method="POST" role="form">
-			
-				<div class="form-group">
-					<input type="text" class="form-control" id="" placeholder="Email">
-					<input type="text" class="form-control" id="" placeholder="Username">
-					<input type="password" class="form-control" id="" placeholder="Password">
-				</div>
-
-					<p>--We promise not to use your information maliciously; we don't know how to do that yet</p>
-
-				<div class="modal-footer">
-					<button type="submit" class="btn btn-primary">Sign Up</button>
-					<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-				</div>
-			</form> -->
 
  				<%= bootstrap_form_for :user do |t| %>
  					<%= t.email_field :email %>
