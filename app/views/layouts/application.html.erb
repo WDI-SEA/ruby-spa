@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RubySpa</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div>
+	<h1>Blue Box</h1>
+</div>
+<div>
+	<ul>
+		<li><a href="">SIGN UP</a></li>
+		<li><a href="#login-modal">LOG IN</a></li>
+	</ul>
+</div>
+
+<div class="modal fade" id="login-modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title">Log In</h4>
+			</div>
+			<div class="modal-body">
+				
+			<form action="" method="POST" role="form">
+			
+				<div class="form-group">
+					<input type="text" class="form-control" id="" placeholder="Username">
+					<input type="password" class="form-control" id="" placeholder="Password">
+				</div>
+				<div class="modal-footer">
+					<button type="submit" class="btn btn-primary">Log In</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+				</div>
+			</form>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<%= yield %>
+
+<script src="//code.jquery.com/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<!-- Latest compiled and minified CSS & JS -->
+
