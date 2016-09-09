@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   get 'api/creatures/:id' => 'api#show'
 
-  post 'api/new' => 'api#create'
+  post 'api/creatures' => 'api#create'
 
   resources :creatures
   resources :api

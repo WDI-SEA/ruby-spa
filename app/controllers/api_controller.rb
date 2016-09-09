@@ -15,12 +15,14 @@ class ApiController < ApplicationController
   end
 
   def create
-    creature = Creature.create creature_params
+    creature = Creature.create 
+    # creature_params
+    render :json => @creature
   end
 
   private
 
-  def creature_params
-    params.require(:creature).permit(:name, :desciption, :location)
-  end
+  # def creature_params
+  #   params.require(:creature).permit(:name, :desciption, :location)
+  # end
 end

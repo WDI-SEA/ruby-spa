@@ -59,14 +59,18 @@ $(document).ready(function() {
       });
     });
 
-  $('button.save-new').click(function(e) {
+  $('.save-new').on('click', 'form#new-creature', function(e) {
       e.preventDefault();
+      var form = $(e.target);
+
+      console.log(form);
 
     $.ajax({
       url: '/api/creatures',
       method: 'POST',
+      // data: { creature: {name: cname.value, desciption: desc.value, location: loc.value}},
       success: function(data){
-        console.log(data);
+        console.log(data)
       },
       error: function(err) {
         console.log(err);
@@ -80,7 +84,6 @@ $(document).ready(function() {
 
     var aTag = $(this);
 
-    console.log(aTag)
     $.ajax({
       url: aTag.attr('href'),
       method: 'GET',

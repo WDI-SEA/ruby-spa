@@ -18,23 +18,20 @@
       </div>
       <div class="modal-body">
       <!-- this is singular for creating new  -->
-         <%= bootstrap_form_for @creature do |c| %>
-        <div>
-          <%= c.text_field :name  %>
-        </div>
-
-        <div>
-          <%= c.text_area :desciption  %>
-        </div>
-
-        <div>
-          <%= c.text_field :location  %>
-         </div>
-      <% end %> 
+        <form id="new-creature" action="/api/creatures" method="POST" role="form">
+          <div class = "form-group">
+            <label>Name</label>
+            <input class="creature-name" placeholder="name here"></input><br>
+            <label>Description</label>
+            <input class="creature-description" placeholder="description here"></input><br>
+            <label>Location</label>
+            <input class="creature-location" placeholder="location here" class="creature-name"></input>
+          </div>
+        </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-default save-new">Save changes</button>
+        <button type="submit" class="btn btn-default save-new">Save changes</button>
       </div>
     </div>
   </div>
